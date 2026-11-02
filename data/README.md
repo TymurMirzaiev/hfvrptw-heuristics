@@ -4,9 +4,9 @@ Three sets of test instances. All solutions in `../results/` refer to these file
 
 | Folder | What | Instances | Used in |
 |---|---|---|---|
-| [`own/`](own/) | our generated instances with three vehicle types (truck, van, cargo bike) | 18 | papers [7] and [8] |
-| [`liu_shen/`](liu_shen/) | vehicle types and best-known solutions of the Liu & Shen (1999) benchmark, built on Solomon's customers | 56 (cost structure A) | paper [7]; 12 of them in paper [8] |
-| [`solomon/`](solomon/) | Solomon's VRPTW instances with best-known solutions (VRPLIB format, PyVRP collection, MIT licence) | 56 | sanity check and base of Liu & Shen |
+| [`own/`](own/) | our generated instances with three vehicle types (truck, van, cargo bike) of different speeds | 18 | main test of papers [7] and [8] |
+| [`liu_shen/`](liu_shen/) | vehicle types and best-known solutions of the Liu & Shen (1999) benchmark, built on Solomon's customers | 56 (cost structure A) | [7]: comparison with best-known solutions (all 56); [8]: check with 3–6 types (12) |
+| [`solomon/`](solomon/) | Solomon's VRPTW instances with best-known solutions (VRPLIB format, PyVRP collection, MIT licence) | 56 | [7]: code check (single vehicle type); customer data of Liu & Shen |
 
 ---
 
