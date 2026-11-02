@@ -1,0 +1,4 @@
+# The solver (hfvrptw/, examples/) uses only the Python standard library.
+# These are needed to rerun the analysis and the figures:
+scipy        # Wilcoxon test in scripts/analyze_results.py
+matplotlib   # scripts/make_figures.py

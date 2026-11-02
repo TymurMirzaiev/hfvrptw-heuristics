@@ -1,0 +1,19 @@
+class,cost_structure,MDA_2008,BPDRT_2009,UHGS_2014,HEA_2015,best_avg,source,objective_definition
+R1,A,4068.59,4060.96,4031.28,4041.46,4031.28,Koc et al. (2015) Table 3 'Results for FD' (average TC per instance set; best-of-runs per instance averaged),FD: total fixed vehicle cost + total Euclidean distance
+R1,B,1854.60,,1841.43,1839.39,1839.39,Koc et al. (2015) Table 3 'Results for FD' (average TC per instance set; best-of-runs per instance averaged),FD: total fixed vehicle cost + total Euclidean distance
+R1,C,1539.48,1539.90,1530.25,1525.56,1525.56,Koc et al. (2015) Table 3 'Results for FD' (average TC per instance set; best-of-runs per instance averaged),FD: total fixed vehicle cost + total Euclidean distance
+C1,A,7085.56,7085.91,7082.98,7082.98,7082.98,Koc et al. (2015) Table 3 'Results for FD' (average TC per instance set; best-of-runs per instance averaged),FD: total fixed vehicle cost + total Euclidean distance
+C1,B,2335.11,,2332.89,2332.90,2332.89,Koc et al. (2015) Table 3 'Results for FD' (average TC per instance set; best-of-runs per instance averaged),FD: total fixed vehicle cost + total Euclidean distance
+C1,C,1615.75,1615.40,1615.49,1615.38,1615.38,Koc et al. (2015) Table 3 'Results for FD' (average TC per instance set; best-of-runs per instance averaged),FD: total fixed vehicle cost + total Euclidean distance
+RC1,A,4944.48,4935.52,4891.25,4916.41,4891.25,Koc et al. (2015) Table 3 'Results for FD' (average TC per instance set; best-of-runs per instance averaged),FD: total fixed vehicle cost + total Euclidean distance
+RC1,B,2121.62,,2107.08,2103.21,2103.21,Koc et al. (2015) Table 3 'Results for FD' (average TC per instance set; best-of-runs per instance averaged),FD: total fixed vehicle cost + total Euclidean distance
+RC1,C,1741.78,1749.66,1734.36,1725.44,1725.44,Koc et al. (2015) Table 3 'Results for FD' (average TC per instance set; best-of-runs per instance averaged),FD: total fixed vehicle cost + total Euclidean distance
+R2,A,3193.41,3180.59,3151.96,3150.29,3150.29,Koc et al. (2015) Table 3 'Results for FD' (average TC per instance set; best-of-runs per instance averaged),FD: total fixed vehicle cost + total Euclidean distance
+R2,B,1392.92,,1351.91,1351.52,1351.52,Koc et al. (2015) Table 3 'Results for FD' (average TC per instance set; best-of-runs per instance averaged),FD: total fixed vehicle cost + total Euclidean distance
+R2,C,1149.65,1149.11,1128.71,1126.42,1126.42,Koc et al. (2015) Table 3 'Results for FD' (average TC per instance set; best-of-runs per instance averaged),FD: total fixed vehicle cost + total Euclidean distance
+C2,A,5690.87,5689.40,5686.75,5686.75,5686.75,Koc et al. (2015) Table 3 'Results for FD' (average TC per instance set; best-of-runs per instance averaged),FD: total fixed vehicle cost + total Euclidean distance
+C2,B,1698.51,,1686.75,1686.75,1686.75,Koc et al. (2015) Table 3 'Results for FD' (average TC per instance set; best-of-runs per instance averaged),FD: total fixed vehicle cost + total Euclidean distance
+C2,C,1186.03,1185.70,1185.19,1185.19,1185.19,Koc et al. (2015) Table 3 'Results for FD' (average TC per instance set; best-of-runs per instance averaged),FD: total fixed vehicle cost + total Euclidean distance
+RC2,A,4241.33,4231.25,4210.10,4210.10,4210.10,Koc et al. (2015) Table 3 'Results for FD' (average TC per instance set; best-of-runs per instance averaged),FD: total fixed vehicle cost + total Euclidean distance
+RC2,B,1704.13,,1686.63,1686.47,1686.47,Koc et al. (2015) Table 3 'Results for FD' (average TC per instance set; best-of-runs per instance averaged),FD: total fixed vehicle cost + total Euclidean distance
+RC2,C,1374.55,1385.32,1358.24,1359.33,1358.24,Koc et al. (2015) Table 3 'Results for FD' (average TC per instance set; best-of-runs per instance averaged),FD: total fixed vehicle cost + total Euclidean distance

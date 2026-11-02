@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this code or the instances, please cite this repository."
+type: software
+title: "HFVRPTW heuristics: code and data for method selection and the vehicle type change operator"
+authors:
+  - family-names: Mirzaiev
+    given-names: Tymur
+    orcid: "https://orcid.org/0009-0006-0158-4329"
+    affiliation: "Oles Honchar Dnipro National University"
+  - family-names: Mykhalchuk
+    given-names: Hanna
+    orcid: "https://orcid.org/0000-0002-5476-6349"
+    affiliation: "Oles Honchar Dnipro National University"
+repository-code: "https://github.com/TymurMirzaiev/hfvrptw-heuristics"
+date-released: 2026-11-02
+version: "1.0.0"
+keywords:
+  - vehicle routing
+  - heterogeneous fleet
+  - time windows
+  - heuristics
+  - local search
+  - metaheuristics

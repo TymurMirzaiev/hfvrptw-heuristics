@@ -1,0 +1,203 @@
+{
+ "R1": [
+  {
+   "name": "A",
+   "capacity": 30,
+   "fixed_cost_A": 50,
+   "fixed_cost_B": 10,
+   "fixed_cost_C": 5
+  },
+  {
+   "name": "B",
+   "capacity": 50,
+   "fixed_cost_A": 80,
+   "fixed_cost_B": 16,
+   "fixed_cost_C": 8
+  },
+  {
+   "name": "C",
+   "capacity": 80,
+   "fixed_cost_A": 140,
+   "fixed_cost_B": 28,
+   "fixed_cost_C": 14
+  },
+  {
+   "name": "D",
+   "capacity": 120,
+   "fixed_cost_A": 250,
+   "fixed_cost_B": 50,
+   "fixed_cost_C": 25
+  },
+  {
+   "name": "E",
+   "capacity": 200,
+   "fixed_cost_A": 500,
+   "fixed_cost_B": 100,
+   "fixed_cost_C": 50
+  }
+ ],
+ "C1": [
+  {
+   "name": "A",
+   "capacity": 100,
+   "fixed_cost_A": 300,
+   "fixed_cost_B": 60,
+   "fixed_cost_C": 30
+  },
+  {
+   "name": "B",
+   "capacity": 200,
+   "fixed_cost_A": 800,
+   "fixed_cost_B": 160,
+   "fixed_cost_C": 80
+  },
+  {
+   "name": "C",
+   "capacity": 300,
+   "fixed_cost_A": 1350,
+   "fixed_cost_B": 270,
+   "fixed_cost_C": 135
+  }
+ ],
+ "RC1": [
+  {
+   "name": "A",
+   "capacity": 40,
+   "fixed_cost_A": 60,
+   "fixed_cost_B": 12,
+   "fixed_cost_C": 6
+  },
+  {
+   "name": "B",
+   "capacity": 80,
+   "fixed_cost_A": 150,
+   "fixed_cost_B": 30,
+   "fixed_cost_C": 15
+  },
+  {
+   "name": "C",
+   "capacity": 150,
+   "fixed_cost_A": 300,
+   "fixed_cost_B": 60,
+   "fixed_cost_C": 30
+  },
+  {
+   "name": "D",
+   "capacity": 200,
+   "fixed_cost_A": 450,
+   "fixed_cost_B": 90,
+   "fixed_cost_C": 45
+  }
+ ],
+ "R2": [
+  {
+   "name": "A",
+   "capacity": 300,
+   "fixed_cost_A": 450,
+   "fixed_cost_B": 90,
+   "fixed_cost_C": 45
+  },
+  {
+   "name": "B",
+   "capacity": 400,
+   "fixed_cost_A": 700,
+   "fixed_cost_B": 140,
+   "fixed_cost_C": 70
+  },
+  {
+   "name": "C",
+   "capacity": 600,
+   "fixed_cost_A": 1200,
+   "fixed_cost_B": 240,
+   "fixed_cost_C": 120
+  },
+  {
+   "name": "D",
+   "capacity": 1000,
+   "fixed_cost_A": 2500,
+   "fixed_cost_B": 500,
+   "fixed_cost_C": 250
+  }
+ ],
+ "C2": [
+  {
+   "name": "A",
+   "capacity": 400,
+   "fixed_cost_A": 1000,
+   "fixed_cost_B": 200,
+   "fixed_cost_C": 100
+  },
+  {
+   "name": "B",
+   "capacity": 500,
+   "fixed_cost_A": 1400,
+   "fixed_cost_B": 280,
+   "fixed_cost_C": 140
+  },
+  {
+   "name": "C",
+   "capacity": 600,
+   "fixed_cost_A": 2000,
+   "fixed_cost_B": 400,
+   "fixed_cost_C": 200
+  },
+  {
+   "name": "D",
+   "capacity": 700,
+   "fixed_cost_A": 2700,
+   "fixed_cost_B": 540,
+   "fixed_cost_C": 270
+  }
+ ],
+ "RC2": [
+  {
+   "name": "A",
+   "capacity": 100,
+   "fixed_cost_A": 150,
+   "fixed_cost_B": 30,
+   "fixed_cost_C": 15
+  },
+  {
+   "name": "B",
+   "capacity": 200,
+   "fixed_cost_A": 350,
+   "fixed_cost_B": 70,
+   "fixed_cost_C": 35
+  },
+  {
+   "name": "C",
+   "capacity": 300,
+   "fixed_cost_A": 550,
+   "fixed_cost_B": 110,
+   "fixed_cost_C": 55
+  },
+  {
+   "name": "D",
+   "capacity": 400,
+   "fixed_cost_A": 800,
+   "fixed_cost_B": 160,
+   "fixed_cost_C": 80
+  },
+  {
+   "name": "E",
+   "capacity": 500,
+   "fixed_cost_A": 1100,
+   "fixed_cost_B": 220,
+   "fixed_cost_C": 110
+  },
+  {
+   "name": "F",
+   "capacity": 1000,
+   "fixed_cost_A": 2500,
+   "fixed_cost_B": 500,
+   "fixed_cost_C": 250
+  }
+ ],
+ "_meta": {
+  "note": "Liu & Shen (1999) vehicle types. Name = type letter as used in Koc et al. (2015) fleet-mix strings (A = smallest). Cost B = A/5, cost C = A/10 (holds for every entry). Capacities apply to all three cost structures.",
+  "sources": [
+   "jmanguino/FSMVRPTWSC Instances/Literature Adapted/Vehicles.txt (first column of each cost matrix = fixed cost; A/B/C given explicitly)",
+   "rammohan2004/CVRP-with-Time-Windows-and-Varying-Vehicle-Capacities instance-generator/solomon_to_fsmvrptw.py LIU_SHEN_TABLES (capacity, cost A; 'Liu & Shen Table 7 verbatim')"
+  ]
+ }
+}
