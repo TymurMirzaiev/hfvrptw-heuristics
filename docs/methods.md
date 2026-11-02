@@ -1,5 +1,7 @@
 # Methods and code
 
+For a gentler, illustrated walk-through, see [How it works](how-it-works.md).
+
 ## Code map (`hfvrptw/`)
 
 | File | What it does |

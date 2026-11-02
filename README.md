@@ -7,6 +7,8 @@ This repository holds the code, test instances and raw results behind two papers
 
 Pure Python, no external solver. Українською — [нижче](#українською).
 
+👉 **New here? Start with [How it works: a gentle tour of the code](docs/how-it-works.md)**, a picture-book explanation of what the solver does, step by step.
+
 **Contents:**
 - [The problem](#the-problem)
 - [Main results](#main-results)
@@ -124,6 +126,7 @@ hfvrptw-heuristics/
 │   └── descent_times.json   local search descent time per instance
 ├── figures/                 figures of the papers
 ├── docs/
+│   ├── how-it-works.md      gentle illustrated tour of the implementation
 │   └── methods.md           methods, strategies, code map, API example
 ├── CITATION.cff
 └── requirements.txt
@@ -196,6 +199,7 @@ python3 examples/solve.py data/own/RC100_0.json --method M6 --time 4
 - `data/liu_shen/`, `data/solomon/` — загальнодоступні задачі;
 - `results/` — сирі результати всіх 9032 прогонів ([опис](results/README.md));
 - `scripts/` — як повторити всі експерименти;
+- `docs/how-it-works.md` — просте ілюстроване пояснення, як працює реалізація;
 - `docs/methods.md` — опис методів і стратегій.
 
 Усі розв'язки перевірено незалежним контролером допустимості; порушень немає.
