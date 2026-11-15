@@ -44,16 +44,16 @@ The fleet has three vehicle types, and you can use as many vehicles of each type
 
 | Paper | Question | Answer |
 |---|---|---|
-| **[7] Method selection** | Six methods, from nearest neighbour to iterated local search: which one for which time budget? | **Local search gives the biggest single gain.** Adding it to insertion cuts the mean gap from 42.2 % to 17.6 %. **A metaheuristic pays off only if the budget is at least 2× the time of one local search descent.** With 5× or more, iterated local search beats plain local search on every instance. On the public Liu & Shen benchmark, the best method is 5.5 % above the best-known solutions after 12 s. |
+| **[7] Performance of heuristic methods** | Six methods, from nearest neighbour to iterated local search: which one for which time budget? | **Local search gives the biggest single gain.** Adding it to insertion cuts the mean gap from 42.2 % to 17.6 %. **A metaheuristic starts to pay off on average at about 2× the time of one local search descent; from 5× on, iterated local search is significantly better than plain local search on every instance.** On the public Liu & Shen benchmark, iterated local search is 5.5 % above the best-known solutions after 12 s. |
 | **[8] Type change operator** | When should local search try other vehicle types for a route? | **Evaluated naively, trying all types is expensive**: 1.63× the route evaluations. **With a constant-time cost bound per type it becomes almost free**: 1.03×, with 97.6 % fewer evaluations. It then gives the best solutions. Re-typing a finished solution afterwards brings no gain. |
 
-Authors: T. R. Mirzaiev, H. Y. Mykhalchuk (Oles Honchar Dnipro National University). Both papers are in Ukrainian and have been submitted to Ukrainian scientific journals. Details: [`docs/methods.md`](docs/methods.md).
+Authors: T. R. Mirzaiev, H. Y. Mykhalchuk (Oles Honchar Dnipro National University). Both papers are being prepared for Ukrainian scientific journals. Details: [`docs/methods.md`](docs/methods.md).
 
 **Paper titles**
 
 | | English | Українською |
 |---|---|---|
-| [7] | Comparative analysis of solution methods for the heterogeneous fleet vehicle routing problem with time windows | Порівняльний аналіз методів розв'язання задачі маршрутизації різнорідного парку транспортних засобів з часовими вікнами |
+| [7] | Performance evaluation of heuristic methods for solving the heterogeneous fleet vehicle routing problem with time windows | Дослідження ефективності евристичних методів розв'язання задачі маршрутизації різнорідного парку транспортних засобів із часовими вікнами |
 | [8] | The vehicle type change operator in local search for the heterogeneous fleet vehicle routing problem | Оператор зміни типу транспортного засобу в локальному пошуку для задачі маршрутизації різнорідного парку |
 
 ## Data sets and where they are used
@@ -158,8 +158,8 @@ python3 scripts/make_figures.py              # writes figures/*.png
 
 If you use the code or the instances, please cite the repository (see [`CITATION.cff`](CITATION.cff)). Once the papers are published, cite them too:
 
-- [7] Mirzaiev T. R., Mykhalchuk H. Y. Comparative analysis of solution methods for the heterogeneous fleet vehicle routing problem with time windows. 2026, submitted. (In Ukrainian.)
-- [8] Mirzaiev T. R., Mykhalchuk H. Y. The vehicle type change operator in local search for the heterogeneous fleet vehicle routing problem. 2026, submitted. (In Ukrainian.)
+- [7] Mirzaiev T. R., Mykhalchuk H. Y. Performance evaluation of heuristic methods for solving the heterogeneous fleet vehicle routing problem with time windows. In preparation.
+- [8] Mirzaiev T. R., Mykhalchuk H. Y. The vehicle type change operator in local search for the heterogeneous fleet vehicle routing problem. In preparation.
 
 Third-party data:
 - **Solomon instances:** PyVRP instance collection, MIT licence, [`data/solomon/LICENSE_PyVRP_Instances.txt`](data/solomon/LICENSE_PyVRP_Instances.txt).
@@ -179,7 +179,7 @@ Related: [mt-hfvrptw-stand](https://github.com/TymurMirzaiev/mt-hfvrptw-stand), 
 
 | Стаття | Головний висновок |
 |---|---|
-| **[7] Порівняльний аналіз методів** | Найбільший виграш дає локальний пошук: середній розрив зменшується з 42,2 % до 17,6 %. Метаевристика окупається, лише якщо бюджет часу щонайменше вдвічі перевищує тривалість одного спуску локального пошуку. За п'ятикратного запасу ітерований локальний пошук кращий на всіх задачах. |
+| **[7] Дослідження ефективності евристичних методів** | Найбільший виграш дає локальний пошук: середній розрив зменшується з 42,2 % до 17,6 %. Метаевристика в середньому починає вигравати приблизно від двох тривалостей одного спуску локального пошуку, а від п'яти ітерований локальний пошук значуще кращий на всіх задачах. |
 | **[8] Оператор зміни типу** | Якщо переміщення відсіювати нижньою оцінкою вартості, повний перебір типів майже нічого не коштує (×1,03 оцінювань замість ×1,63) і дає найкращі розв'язки. Переоптимізація типів у готовому розв'язку виграшу не дає. |
 
 **Як спробувати:**

@@ -22,6 +22,16 @@ The raw output of every run behind papers [7] and [8]: 9032 runs. Each solution 
 | `p8_liu.jsonl` | [8] | C0–C5 in iterated local search under 4 s on 12 Liu & Shen instances with 3–6 vehicle types, 5 seeds | 360 |
 | `sanity.jsonl` | — | single-type VRPTW on the 56 Solomon instances, iterated local search 20 s | 56 |
 
+## Computing environment and timing
+
+- **Software:** Python 3.13.16, standard library only for the solver; Ubuntu 24.04.5 LTS.
+- **Machine:** cloud virtual machine (KVM) with 2 virtual cores, Intel Xeon 2.10 GHz, 8 GB RAM. The CPU model was not logged during the runs of 2 November 2026; the values above are those of the same virtual machine type.
+- **Parallelism:** every run is a separate single-threaded process; two independent runs were executed at a time (`run_experiments.py <exp> 2`), one per core. The experiments themselves ran one after another, never overlapping.
+- **Time:** wall-clock time measured with `time.perf_counter` inside the run, from the start of the method (including construction of the initial solutions) to the return of the solution. The checker is not included.
+- **Budgets of M5 and M6** cover the whole run, construction included. Construction cannot be interrupted, so at the smallest relative budget (0.5 descents) runs overshoot the budget by about 20 % on average; from 2 descents on, by at most a few per cent.
+- **Descent time** (`descent_times.json`, unit of the relative budgets) is the median of 5 measurements of the M4 local search **alone**, without the M3 construction. The construction takes about half a descent (median 0.51), so a complete M4 run takes about 1.5 descents: 2 descents ≈ 1.3 × the full M4 time, 5 descents ≈ 3.3 ×.
+- **Statistics for the relative budgets:** M6 is significantly worse than M4 at 0.5 and 1 descent and significantly better from 5 descents (Holm-adjusted p < 0.001, all 18 instances). At 2 descents M6 is better on average (16.82 % vs 17.61 %, 12 of 18 instances), but the difference is borderline: raw p = 0.043; Holm-adjusted p = 0.043 within the 6 M6-vs-M4 comparisons and 0.13 within all 12 comparisons of M5 and M6.
+
 ## Line format (`raw/*.jsonl`)
 
 ```json
