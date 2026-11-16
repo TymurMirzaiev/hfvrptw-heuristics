@@ -47,7 +47,7 @@ The fleet has three vehicle types, and you can use as many vehicles of each type
 | **[7] Performance of heuristic methods** | Six methods, from nearest neighbour to iterated local search: which one for which time budget? | **Local search gives the biggest single gain.** Adding it to insertion cuts the mean gap from 42.2 % to 17.6 %. **A metaheuristic starts to pay off on average at about 2× the time of one local search descent; from 5× on, iterated local search is significantly better than plain local search on every instance.** On the public Liu & Shen benchmark, iterated local search is 5.5 % above the best-known solutions after 12 s. |
 | **[8] Type change operator** | When should local search try other vehicle types for a route? | **Evaluated naively, trying all types is expensive**: 1.63× the route evaluations. **With a constant-time cost bound per type it becomes almost free**: 1.03×, with 97.6 % fewer evaluations. It then gives the best solutions. Re-typing a finished solution afterwards brings no gain. |
 
-Authors: T. R. Mirzaiev, H. Y. Mykhalchuk (Oles Honchar Dnipro National University). Both papers are being prepared for Ukrainian scientific journals. Details: [`docs/methods.md`](docs/methods.md).
+Authors: T. R. Mirzaiev, H. Y. Mykhalchuk (Oles Honchar Dnipro National University). Both papers are submitted to the journal *Aktualni problemy avtomatyzatsii ta informatsiinykh tekhnolohii* (Actual Problems of Automation and Information Technologies, Oles Honchar Dnipro National University, ISSN 2312-119X), 2026; paper [7] in Ukrainian and in English. Details: [`docs/methods.md`](docs/methods.md).
 
 **Paper titles**
 
@@ -124,7 +124,7 @@ hfvrptw-heuristics/
 │   ├── raw/                 one .jsonl file per experiment
 │   ├── summary.json         all tables of both papers
 │   └── descent_times.json   local search descent time per instance
-├── figures/                 figures of the papers
+├── figures/                 figures of the papers (Fig. 1 of [7] in Ukrainian and English)
 ├── docs/
 │   ├── how-it-works.md      gentle illustrated tour of the implementation
 │   └── methods.md           methods, strategies, code map, API example
@@ -141,7 +141,7 @@ pip install -r requirements.txt
 
 sh scripts/run_all.sh                        # all experiments: about 5 hours on 2 cores
 python3 scripts/analyze_results.py           # prints the tables, writes results/summary.json
-python3 scripts/make_figures.py              # writes figures/*.png
+python3 scripts/make_figures.py              # writes figures/*.png (Fig. 1 of [7] in both languages)
 ```
 
 - **One experiment only:** `python3 scripts/run_experiments.py p7_own 2`. The last argument is the number of worker processes.
@@ -158,8 +158,8 @@ python3 scripts/make_figures.py              # writes figures/*.png
 
 If you use the code or the instances, please cite the repository (see [`CITATION.cff`](CITATION.cff)). Once the papers are published, cite them too:
 
-- [7] Mirzaiev T. R., Mykhalchuk H. Y. Performance evaluation of heuristic methods for solving the heterogeneous fleet vehicle routing problem with time windows. In preparation.
-- [8] Mirzaiev T. R., Mykhalchuk H. Y. The vehicle type change operator in local search for the heterogeneous fleet vehicle routing problem. In preparation.
+- [7] Mirzaiev T. R., Mykhalchuk H. Y. Performance evaluation of heuristic methods for solving the heterogeneous fleet vehicle routing problem with time windows. *Aktualni problemy avtomatyzatsii ta informatsiinykh tekhnolohii*. Submitted, 2026.
+- [8] Mirzaiev T. R., Mykhalchuk H. Y. The vehicle type change operator in local search for the heterogeneous fleet vehicle routing problem. *Aktualni problemy avtomatyzatsii ta informatsiinykh tekhnolohii*. Submitted, 2026 (in Ukrainian).
 
 Third-party data:
 - **Solomon instances:** PyVRP instance collection, MIT licence, [`data/solomon/LICENSE_PyVRP_Instances.txt`](data/solomon/LICENSE_PyVRP_Instances.txt).
@@ -175,7 +175,12 @@ Related: [mt-hfvrptw-stand](https://github.com/TymurMirzaiev/mt-hfvrptw-stand), 
 
 ## Українською
 
-**Що це.** Код, тестові задачі та сирі результати двох статей про планування доставки різнорідним парком (вантажівки, фургони, вантажні велосипеди) з часовими вікнами клієнтів.
+**Що це.** Код, тестові задачі та сирі результати двох статей про планування доставки різнорідним парком (вантажівки, фургони, вантажні велосипеди) з часовими вікнами клієнтів. Обидві статті подано до фахового видання «Актуальні проблеми автоматизації та інформаційних технологій» (ДНУ імені Олеся Гончара, 2026); стаття [7] — українською та англійською.
+
+| | Назва |
+|---|---|
+| [7] | Дослідження ефективності евристичних методів розв'язання задачі маршрутизації різнорідного парку транспортних засобів із часовими вікнами |
+| [8] | Оператор зміни типу транспортного засобу в локальному пошуку для задачі маршрутизації різнорідного парку |
 
 | Стаття | Головний висновок |
 |---|---|

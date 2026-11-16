@@ -1,4 +1,4 @@
-"""Figures of papers [7] and [8] (PNG, 300 dpi) from results/summary.json.
+"""Figures of papers [7] and [8] (PNG, 300 dpi) from results/summary.json; Fig. 1 of [7] also in English.
 
 usage: python3 scripts/analyze_results.py && python3 scripts/make_figures.py
 """
@@ -19,24 +19,36 @@ FIG = os.path.join(ROOT, "figures")
 plt.rcParams.update({"font.family": "DejaVu Serif", "font.size": 10})
 
 
-def fig7(s):
+P7_LABELS = {
+    "uk": {"M5": "M5 (багаторазовий старт)", "M6": "M6 (ітерований локальний пошук)",
+           "M4": "M4 (вставка + локальний пошук)",
+           "x": "Бюджет часу / тривалість одного спуску локального пошуку",
+           "y": "Середній відносний розрив, %", "file": "p7_fig1_budget.png"},
+    "en": {"M5": "M5 (multistart)", "M6": "M6 (iterated local search)", "M4": "M4 (insertion + local search)",
+           "x": "Time budget / duration of one local search descent",
+           "y": "Mean relative gap, %", "file": "p7_fig1_budget_en.png"},
+}
+
+
+def fig7(s, lang="uk"):
+    L = P7_LABELS[lang]
     rel = s["p7_rel"]
     m4 = s["p7"]["table"]["M4"]["gap"]
     xs = sorted({float(k.split("_")[1]) for k in rel})
     fig, ax = plt.subplots(figsize=(5.2, 3.4))
-    for m, mk, lab in (("M5", "s--", "M5 (багаторазовий старт)"), ("M6", "o-", "M6 (ітерований локальний пошук)")):
+    for m, mk in (("M5", "s--"), ("M6", "o-")):
         ys = [rel["%s_%g" % (m, x)]["gap"] for x in xs]
-        ax.plot(xs, ys, mk, color="black", lw=1.2, ms=4, label=lab)
-    ax.axhline(m4, color="black", lw=1, ls=":", label="M4 (вставка + локальний пошук)")
+        ax.plot(xs, ys, mk, color="black", lw=1.2, ms=4, label=L[m])
+    ax.axhline(m4, color="black", lw=1, ls=":", label=L["M4"])
     ax.axvspan(xs[0] * 0.9, 2, color="0.9", zorder=0)
     ax.set_xscale("log")
     ax.set_xticks(xs)
     ax.set_xticklabels(["%g" % x for x in xs])
-    ax.set_xlabel("Бюджет часу / тривалість одного спуску локального пошуку")
-    ax.set_ylabel("Середній відносний розрив, %")
+    ax.set_xlabel(L["x"])
+    ax.set_ylabel(L["y"])
     ax.legend(frameon=False, fontsize=8)
     fig.tight_layout()
-    fig.savefig(os.path.join(FIG, "p7_fig1_budget.png"), dpi=300)
+    fig.savefig(os.path.join(FIG, L["file"]), dpi=300)
     plt.close(fig)
 
 
@@ -83,7 +95,8 @@ def main():
     with open(os.path.join(RES, "summary.json")) as f:
         s = json.load(f)
     if "p7_rel" in s:
-        fig7(s)
+        fig7(s, "uk")
+        fig7(s, "en")
     if "p8_ls" in s:
         fig8(s)
 

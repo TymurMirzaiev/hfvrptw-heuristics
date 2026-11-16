@@ -12,8 +12,8 @@ authors:
     orcid: "https://orcid.org/0000-0002-5476-6349"
     affiliation: "Oles Honchar Dnipro National University"
 repository-code: "https://github.com/TymurMirzaiev/hfvrptw-heuristics"
-date-released: 2026-11-02
-version: "1.0.0"
+date-released: 2026-11-16
+version: "1.1.0"
 keywords:
   - vehicle routing
   - heterogeneous fleet
